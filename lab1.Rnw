@@ -254,11 +254,12 @@ compute_mean_norm_MC = function(tolerance = 1e-8, maxIter = 1e5){
   }
   
   if(diff > tolerance & n >= maxIter) {
-    warning ("convergence criterion has not been met")
+    print ("convergence criterion has not been met")
   }
   else {
     return(list("MC_estimate" = MC_estimate, "iterations" = n, "diff" = diff))
   }
+  return(list("MC_estimate" = MC_estimate, "iterations" = n, "diff" = diff))
 }
 
 @
